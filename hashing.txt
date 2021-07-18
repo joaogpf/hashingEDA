@@ -1,0 +1,56 @@
+"Busca"
+  - Muitos métodos de busca funcionam segundo o mesmo princípio:
+  procurar a informação desejada com base na comparação de suas
+  chaves, isto é, com base em algum valor que a compõe
+
+"Problema"
+   -Algoritmos eficientes exigem que os elementos sejam armazenados
+   de forma ordenada
+   -Custo da ordenação no melhor caso: "O (N log N)"
+   -Custo da busca: "O (log N)"
+
+"Busca Ideal"
+    -Acesso direto ao elemento procurado, sem nenhuma
+    comparação entre chaves de chaves: custo "O(1)"
+
+"Solução"
+    -Usar uma "tabela hash"
+
+"Tabela Hash"
+    - Também conhecidas como tabelas de "indexação" ou de "espalhamento"
+    - é uma generalização da ideia de "array"
+    - utiliza uma função para espalhar os elementos que queremos armazenar na tabela
+    - O espalhamento faz com que os elementos fiquem dispersos de forma não ordenada dentro do
+    "array" que define a tabela
+
+"Função de Hashing"
+    - Função que espalha os elementos na tabela
+
+"Por que espalhar os elementos melhora a busca?"
+    - Uma tabela hash permite a associação de "valores" a "chaves"
+    -"chave" é a parte da informação que compõe o elemento a ser inserido ou buscado na tabela
+    -"Valor": é a posição [indice] onde o element se encontra no array que define a tabela
+
+Assim, a partir de uma "chave" podemos acessar de forma rápida uma determinada "posição" do array
+Na média, essa operação tem custo "O(1)"
+
+Vantagens:
+    - Alta eficiência na operação de busca O(1)
+    - Tempo de busca é praticamente independente
+    do número de "chaves" armazenadas na tabela
+    - Implementação simples
+
+Desvantagens
+    - alto custo para recuperar os elementos da tabela pela "chave"
+    Nesse caso, é preciso ordenar a tabela
+    - pior caso é O(N), sendo N o tamanho da tabela: alto número de colisões
+
+"Aplicações"
+    - Busca de elementos em base de dafos
+    - criptografia: MD5 e familia SHA (Secure Hash Algorithm)
+    -implementação da tabela de símbolos dos compiladores
+    - armazenamento de senhas com seguraça: a senha não é armazenada nos servidor, mas sim
+    o resultado da função hash
+    - verificação de integridade de dados e autenticação de mensagens
+
+    
